@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.1">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1">&lt;title&gt;MOA Klicks&lt;/title&gt;</p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-family: Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>max-width: 500px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin: auto;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background-color: #f4f4f4;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>h1 {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>label {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-top: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>input, select {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-top: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>box-sizing: border-box;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border: 1px solid #ccc;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.slider {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.result {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-top: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background-color: #ddd;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.author {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-top: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-style: italic;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;h1&gt;MOA Klicks&lt;/h1&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;label for="offset"&gt;Offset [mm]&lt;/label&gt;</p>
+<p class="p1">&lt;input type="number" id="offset" value="0" min="0" max="2500" step="1"&gt;</p>
+<p class="p1">&lt;input type="range" id="offsetSlider" class="slider" value="0" min="0" max="2500" step="1"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;label for="distance"&gt;Distance [m]&lt;/label&gt;</p>
+<p class="p1">&lt;input type="number" id="distance" value="100" min="1" max="3000" step="1"&gt;</p>
+<p class="p1">&lt;input type="range" id="distanceSlider" class="slider" value="100" min="1" max="3000" step="1"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;label for="clickMOA"&gt;Click per MOA&lt;/label&gt;</p>
+<p class="p1">&lt;select id="clickMOA"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;option value="1"&gt;1/1&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;option value="0.5"&gt;1/2&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;option value="0.25" selected&gt;1/4&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;option value="0.125"&gt;1/8&lt;/option&gt;</p>
+<p class="p1">&lt;/select&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="result" id="result"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>Result: 0 clicks&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>1 MOA = 29.10 mm @ 100 m</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="author"&gt;Autor: Arkadiusz Bączyk&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">function updateResult() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let offset = parseFloat(document.getElementById('offset').value);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let distance = parseFloat(document.getElementById('distance').value);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let clickMOA = parseFloat(document.getElementById('clickMOA').value);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>let mmPerMOA = 29.1 * (distance / 100);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let clicks = Math.round(offset / (mmPerMOA * clickMOA));</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('result').innerHTML =</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`Result: ${clicks} clicks&lt;br&gt;1 MOA = ${mmPerMOA.toFixed(2)} mm @ ${distance} m`;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// Synchronizacja sliderów i pól input</p>
+<p class="p1">const offsetInput = document.getElementById('offset');</p>
+<p class="p1">const offsetSlider = document.getElementById('offsetSlider');</p>
+<p class="p1">offsetInput.addEventListener('input', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>offsetSlider.value = offsetInput.value;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>updateResult();</p>
+<p class="p1">});</p>
+<p class="p1">offsetSlider.addEventListener('input', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>offsetInput.value = offsetSlider.value;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>updateResult();</p>
+<p class="p1">});</p>
+<p class="p2"><br></p>
+<p class="p1">const distanceInput = document.getElementById('distance');</p>
+<p class="p1">const distanceSlider = document.getElementById('distanceSlider');</p>
+<p class="p1">distanceInput.addEventListener('input', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>distanceSlider.value = distanceInput.value;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>updateResult();</p>
+<p class="p1">});</p>
+<p class="p1">distanceSlider.addEventListener('input', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>distanceInput.value = distanceSlider.value;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>updateResult();</p>
+<p class="p1">});</p>
+<p class="p2"><br></p>
+<p class="p1">document.getElementById('clickMOA').addEventListener('change', updateResult);</p>
+<p class="p2"><br></p>
+<p class="p1">// Początkowe wyliczenie</p>
+<p class="p1">updateResult();</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
